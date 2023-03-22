@@ -1,7 +1,12 @@
 import React from 'react'
+import '../assets/css/Footer.css'
 
 export default function Footer() {
   return (
-    <div>Footer</div>
+    <>
+      <div className="footer-container">
+          Footer
+      </div>
+    </>
   )
 }

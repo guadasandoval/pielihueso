@@ -2,14 +2,14 @@
 .text-link {
     font-family: 'Roboto';
     font-weight: 400;
-    font-size: 60px;
-    color: #ebebeb;
+    font-size: 100px;
+    color: #282828;
     text-decoration: none;
 }
 
 .text-link:hover
 {
-  color: #845484;
+  color: #ff6b03;
 }
 
 #menuToggle
@@ -71,7 +71,7 @@
 {
   opacity: 1;
   transform: rotate(45deg) translate(10px, 0px);
-  background: #845484;
+  background: #282828;
 }
 
 /*
@@ -93,6 +93,8 @@
 
 #menu
 {
+ 
+  margin: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,10 +103,10 @@
   padding: 0px;
   left: 0px;
   top: -16px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   text-align:center;
-  background: #ff6b03;
+  background: #fecce9;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -127,4 +129,11 @@
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+.nav-hr{
+  width: 80%;
+  height: 1px;
+  background-color: rgb(1, 1, 1);
+  border: none;
+  margin: 0px;
 }
