@@ -1,41 +1,75 @@
 import React from 'react'
+import { FaCartPlus } from 'react-icons/fa';
 import '../assets/css/Wines.css'
 import a from '../assets/static/1.png'
 import b from '../assets/static/2.png'
 import c from '../assets/static/3.png'
 import d from '../assets/static/4.png'
-import naranjo from '../assets/static/naranjo.png'
+import  Vino from '../assets/static/naranjo.png'
+
 export default function Wines() {
   return (
     <div>
       <div className="wines-container">
+       
         <div className="wines-card">  
-        <img src={naranjo} alt="" />
           <div className="wines-txt-card">
-             <h3>2020</h3>
-           <h1>Naranjo</h1>
-           <h2>Corte de Torrontés (50%) con de Sauvignon Blanc y Chardonnay cofermentados.<br></br>Acero inoxidable y barrica de tercer uso. Contacto con pieles durante 4 meses. Levaduras nativas.Sin filtrar.<br></br> Alcohol: 12,5%</h2>
-           <button className='btn-wines'>Ver más</button>
+           <h1>Vinos de familia Valle de Uco</h1>
+         <img src={Vino} alt="" className='order-img'/>
           </div>
-      
         </div>
-        <div className="other-wines"> 
+        <div className="other-wines">
+             <h1>Nuestros vinos</h1>
           <div className="other-container">
              <div className="other-card">
-              <img src={a} alt="" />
-          <h2>ROSADO PRIMERO</h2>
-          </div> 
+              <div className="center-img">
+                 <img src={a} alt="" />
+              </div>
+             
+          <div className="card-info">
+                <div className="card-txt">
+            <h2>Rosado Primero</h2> 
+            <h3>ARS$2000</h3>
+            </div> 
+            <FaCartPlus className='icon' />
+          </div>
+          </div>
+
           <div className="other-card">
-          <img src={d} alt="" />
-          <h2>PINTÓ VERDOT</h2>
+            <div className="center-img">
+              <img src={d} alt="" />
+            </div>
+          <div className="card-info">
+               <div className="card-txt">
+            <h2>Pintó Verdot</h2>
+            <h3>ARS$2300</h3>
+          </div>
+          <FaCartPlus className='icon' />
+          </div>
           </div>
           <div className="other-card">
-          <img src={b} alt="" />
-          <h2>PIELIHUESO BLANCO</h2>
+            <div className="center-img">
+               <img src={b} alt="" />
+            </div>
+          <div className="card-info">
+              <div className="card-txt">
+            <h2>Pielihueso Blanco</h2>
+          <h3>ARS$2500</h3>
+          </div>
+          <FaCartPlus className='icon'/>
+          </div>
           </div>
           <div className="other-card">
-          <img src={c} alt="" />
-          <h2>VINO DE SEÑOR</h2>
+            <div className="center-img">
+              <img src={c} alt="" />
+            </div>
+          <div className="card-info">
+               <div className="card-txt">
+            <h2>Vino de Señor</h2>
+            <h3>ARS$3100</h3>
+          </div>
+          <FaCartPlus className='icon'/>
+          </div>
           </div>
          
           </div>

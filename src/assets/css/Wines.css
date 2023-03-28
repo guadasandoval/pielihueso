@@ -4,41 +4,36 @@
     overflow: hidden;
 }
 .wines-card{
+    height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     box-sizing: border-box;
+    
 }
 .wines-txt-card{
-    width: 500px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-family: 'Roboto';
-    padding-right: 100px;
+    font-weight: 500;
 }
 .wines-txt-card h1{
-    font-family: 'Noto Serif Lao';
-    font-size: 56px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    text-align: center;
+    margin: 0px;
+    font-size: 230px;  
+    z-index: 1; 
+    position: absolute;
 }
-.wines-txt-card h2{
-    font-weight: 300;
-    font-size: 26px;
-    white-space: initial;
-}
-.wines-txt-card h3{
-    font-weight: 400;
-    font-size: 20px;
-    margin-bottom: 0px;
-}
-
-.wines-card img{
-    width: 760px;
-    height: 100vh;
-    
+.order-img{
+    position: absolute;
+    height: 650px;
+    z-index: 2;
+    margin-right: 80px;
+    margin-bottom: 50px;
 }
 
 .btn-wines{
@@ -62,10 +57,11 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 }
+
 .other-wines h1{
     font-family: 'Noto Serif Lao';
-    font-size: 56px;
-    margin: 0px;
+    font-size: 50px;
+    margin-bottom: 50px;
 }
 .other-wines hr{
     width: 80%;
@@ -74,42 +70,59 @@ justify-content: center;
     border: none;
 }
 .other-container{
-    width: 80%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
 }
 .other-card{
-    width: 300px;
+    width: 280px;
     height: 400px;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 16px;
     box-sizing: border-box;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    padding: 15px;
 }
-.other-card:nth-child(1){
-    background: #88d65a;
-}
-.other-card:nth-child(2){
-    background: #b4102b;
-}
-.other-card:nth-child(3){
-    background: #d3b2d5;
-}
-.other-card:nth-child(4){
-    background: #4caedf;
-}
+
 .other-card h2{
     font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 500;
+    font-size: 18px;
     color: #282828;
+    margin-bottom: 0px;
+}
+.other-card h3{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #282828;
+    margin: 0px;
+}
+.center-img{
+    display: flex;
+    justify-content: center;
 }
 .other-card img{
-    width: 70px;
-    height: 300px;
-    border-radius: 16px;
+    width: 60px;
+    height: 280px;
+}
+.card-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-txt{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.icon{
+    margin-top: 20px;
+    font-size: 24px;
 }
