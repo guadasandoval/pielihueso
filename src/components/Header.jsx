@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './../assets/css/Header.css'
 import { ReactComponent as Logo } from '../assets/static/pielihueso.svg'
+import { FaShoppingCart } from 'react-icons/fa';
 
 
 export default function Header() {
@@ -14,6 +15,7 @@ export default function Header() {
         <Link to="/wines" className='text-link'>Vinos</Link>
         <Link to="/stories" className='text-link'>Crónicas</Link>
         <Link to="/contact" className='text-link'>Contacto</Link>
+        <Link to="/cart" className='text-link'> <FaShoppingCart className='header-icon'/></Link>
       </div>
     </div>
     

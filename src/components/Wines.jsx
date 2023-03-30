@@ -1,4 +1,5 @@
 import React from 'react'
+import { useContext, useEffect } from 'react';
 import { FaCartPlus } from 'react-icons/fa';
 import '../assets/css/Wines.css'
 import a from '../assets/static/1.png'
@@ -6,8 +7,14 @@ import b from '../assets/static/2.png'
 import c from '../assets/static/3.png'
 import d from '../assets/static/4.png'
 import  Vino from '../assets/static/naranjo.png'
+import Contexto from '../context/Contexto';
 
 export default function Wines() {
+  const {products, getProducts} = useContext(Contexto)
+  useEffect(()=>{
+    getProducts()
+  },[])
+ 
   return (
     <div>
       <div className="wines-container">

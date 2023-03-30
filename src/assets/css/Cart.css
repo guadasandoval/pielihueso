@@ -1,0 +1,26 @@
+.cart-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+.cart-card{
+    width: 80%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 16px;
+}
+
+.head-cart{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    color:#cbcbcb;
+}

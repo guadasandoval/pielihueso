@@ -30,7 +30,7 @@
 }
 
 .nav-pages{
-    width: 300px;
+    width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +42,11 @@
     font-weight: 400;
     color: #282828;
     text-decoration: none;
+}
+
+.header-icon{
+    margin-top: 5px;
+    font-size: 25px;
 }
 
 @media only screen and (max-width:1024px) {
