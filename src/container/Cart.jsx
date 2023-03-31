@@ -1,8 +1,13 @@
 import React from 'react'
+import { useContext } from 'react'
 import "../assets/css/Cart.css"
 import ProductsCart from '../components/ProductsCart'
-export default function Cart(props) {
-  const {cart, setCart} = props
+import Contexto from '../context/Contexto'
+
+export default function Cart() {
+
+  const {cart, deleteCart} = useContext(Contexto)
+  
 
   return (
     <>
@@ -13,9 +18,8 @@ export default function Cart(props) {
           <h2>CANTIDAD</h2>
           <h2>TOTAL</h2>
         </div>  
-            <ProductsCart></ProductsCart>
-            <ProductsCart></ProductsCart>
-            <ProductsCart></ProductsCart>
+            {cart.map((item, id)=>(
+            <ProductsCart {...item} key={id}></ProductsCart>))}
             <hr />
         </div>
         

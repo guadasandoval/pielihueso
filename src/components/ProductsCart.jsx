@@ -1,11 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { useEffect } from 'react'
 import '../assets/css/ProductsCart.css'
-import señor from '../assets/static/1.png'
 
-export default function ProductsCart() {
- 
-  let cantidad = 0
-  let total = 0
+
+export default function ProductsCart(props) {
+  const {id, name, description, price, date, img} = props[0]
+  const [total, setTotalProd] = useState(0)
+  let cantidad = 1
+  const calcularTotalProd =()=>{
+  let totalProd = 0
+   totalProd = cantidad*price
+   setTotalProd(totalProd)
+  }
+  useEffect(()=>{calcularTotalProd()},[])
   return (
     <>
   
@@ -13,12 +20,13 @@ export default function ProductsCart() {
         <div className="item-cart">
           <div className="product-cart">
              <div className="item-cart-img">
-                 <img src={señor} alt="" />
+                 <img src={img} alt="" />
             </div>
            
             <div className="item-cart-txt">
-                <p>Vino señor</p>
-                <p>mini descripcion</p>
+              <p>{date}</p>
+                <p>{name}</p>
+                <p>{description}</p>
                
             </div> 
           </div>

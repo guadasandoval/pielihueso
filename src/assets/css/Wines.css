@@ -36,19 +36,6 @@
     margin-bottom: 50px;
 }
 
-.btn-wines{
-    width: 200px;
-    height: 50px;
-    border-radius: 50px;
-    margin-top: 30px;
-    background: #ff6b03;
-    color: #fff;
-   border: none;
-   font-family: 'Roboto';
-   font-weight: 300;
-   font-size: 16px;
-}
-
 .other-wines{
 width: 100%;
 height: 80vh;
@@ -63,66 +50,11 @@ justify-content: center;
     font-size: 50px;
     margin-bottom: 50px;
 }
-.other-wines hr{
-    width: 80%;
-    height: 1px;
-    background-color: rgb(1, 1, 1);
-    border: none;
-}
+
 .other-container{
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-}
-.other-card{
-    width: 280px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 16px;
-    box-sizing: border-box;
-    border-style: solid;
-    border-color: #cccccc;
-    border-width: 1px;
-    padding: 15px;
-}
-
-.other-card h2{
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 18px;
-    color: #282828;
-    margin-bottom: 0px;
-}
-.other-card h3{
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 16px;
-    color: #282828;
-    margin: 0px;
-}
-.center-img{
-    display: flex;
-    justify-content: center;
-}
-.other-card img{
-    width: 60px;
-    height: 280px;
-}
-.card-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.card-txt{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
-.icon{
-    margin-top: 20px;
-    font-size: 24px;
 }

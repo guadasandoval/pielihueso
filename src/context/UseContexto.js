@@ -1,6 +1,8 @@
 import React, { useReducer } from 'react'
 import Reducer from './Reducer'
 import Contexto from './Contexto'
+import Papa from 'papaparse'
+
 
 export default function UseContexto(props) {
     const API = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTYT_8wKtyqCP2-s6XmVFrrBOuQrF0C0ebm1gjqeB3nDfiA75yOWzBJwwWeEQBmd6sJf4n648s3NJwn/pub?gid=0&single=true&output=csv"
@@ -8,7 +10,6 @@ export default function UseContexto(props) {
     const initState = {
         cart: [],
         products: [],
-        total: 0
     }
 
     const [state, dispatch] = useReducer(Reducer, initState)
@@ -16,8 +17,10 @@ export default function UseContexto(props) {
     const getProducts = async ()=>{
         const res = await fetch(API)
         const data = await res.text();
-        console.log(data);
-        dispatch({type: 'GET_PRODUCTS', payload: data})
+        const parsed = await new Promise((resolve, reject)=>{
+            Papa.parse(data, {header: true, complete: resolve, error: reject})
+        })
+        dispatch({type: 'GET_PRODUCTS', payload: parsed.data})
     }
 
     const setCart = (id) =>{

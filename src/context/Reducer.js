@@ -11,15 +11,15 @@ export default function Reducer(state, action) {
             return {...state, products: payload};
         case SET_CART:
             return {...state,
-            carrito:[
-                ...state.carrito,
+            cart:[
+                ...state.cart,
                 state.products.filter((item)=> item.id === payload)
             ]
         };
         case DELETE_CART:
             return {
                 ...state,
-                carrito: state.carrito.filter((item)=> item[0].id !== payload)
+                cart: state.cart.filter((item)=> item[0].id !== payload)
             }
     } 
 }
