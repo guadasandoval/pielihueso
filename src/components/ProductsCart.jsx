@@ -1,21 +1,23 @@
 import React, {useState} from 'react'
+import { useContext } from 'react'
 import { useEffect } from 'react'
 import '../assets/css/ProductsCart.css'
+import Contexto from '../context/Contexto'
 
 
 export default function ProductsCart(props) {
- 
+  const {deleteCart} = useContext(Contexto)
   const {id, name, description, price, date, img} = props[0]
   const [total, setTotalProd] = useState(0)
   const [cantidadFinal, setCantidadProd] = useState(0)
   
   let tbodyCarrito = document.getElementById('tbodyCarrito')
   const calcularTotalProd =(cantidadFinal)=>{
- 
+    
     let totalProd = price
-   
-   totalProd = cantidadFinal*price
-   setTotalProd(totalProd)
+    totalProd = cantidadFinal*price
+    console.log("totalProd1");
+    setTotalProd(totalProd)
   }
 
   if (tbodyCarrito != null){
@@ -30,10 +32,16 @@ export default function ProductsCart(props) {
       setCantidadProd(cantidadFinal+1)
     }
     if(boton.textContent === 'prueba-') {
-      setCantidadProd(cantidadFinal-1)
+      if(cantidadFinal != 0){
+        setCantidadProd(cantidadFinal-1)
+      } else{
+        deleteCart(id)
+      }
+      
     }
   })
-  useEffect(()=>{calcularTotalProd(cantidadFinal)},[])
+  //useEffect(()=>{calcularTotalProd(cantidadFinal)},[])
+  //calcularTotalProd(cantidadFinal)
   return (
     <>
     <hr/>
