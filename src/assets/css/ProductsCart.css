@@ -6,8 +6,8 @@
 }
 .product-cart{
     display: flex;
-
 }
+
 .item-cart img{
     height: 150px;
 }
@@ -41,7 +41,7 @@
 /* CSS */
 .button-17 {
   align-items: center;
-  appearance: none;
+  /* appearance: none; */
   background-color: #fff;
   border-radius: 24px;
   border-style: none;
@@ -59,12 +59,9 @@
   line-height: normal;
   max-width: 100%;
   overflow: visible;
-  padding: 2px 24px;
-  position: relative;
+  padding: 4px 26px;
   text-align: center;
   text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
   width: auto;
   will-change: transform,opacity;
   z-index: 0;
@@ -75,6 +72,7 @@
     border-style: none;
     font-size: 20px;
     color: #3c4043;
+    
 }
 hr{
     height: 1px;

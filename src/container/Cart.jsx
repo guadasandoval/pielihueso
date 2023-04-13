@@ -7,7 +7,6 @@ import Contexto from '../context/Contexto'
 export default function Cart() {
 
   const {cart, deleteCart} = useContext(Contexto)
-  
 
   return (
     <>

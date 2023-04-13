@@ -5,7 +5,7 @@ import Papa from 'papaparse'
 
 
 export default function UseContexto(props) {
-    const API = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTYT_8wKtyqCP2-s6XmVFrrBOuQrF0C0ebm1gjqeB3nDfiA75yOWzBJwwWeEQBmd6sJf4n648s3NJwn/pub?gid=0&single=true&output=csv"
+    const API = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTYT_8wKtyqCP2-s6XmVFrrBOuQrF0C0ebm1gjqeB3nDfiA75yOWzBJwwWeEQBmd6sJf4n648s3NJwn/pub?output=csv"
     const {children} = props
     const initState = {
         cart: [],
@@ -24,6 +24,7 @@ export default function UseContexto(props) {
     }
 
     const setCart = (id) =>{
+        console.log("agregue set cart");
         dispatch({type:'SET_CART', payload: id})
     }
 
