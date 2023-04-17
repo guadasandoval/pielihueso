@@ -13,10 +13,11 @@ export default function ProductsCart(props) {
   
   let tbodyCarrito = document.getElementById('tbodyCarrito')
   const calcularTotalProd =(cantidadFinal)=>{
-    
-    let totalProd = price
+    console.log("estoy en callcular");
+    console.log("otra vez");
+   let totalProd = 0 
     totalProd = cantidadFinal*price
-    console.log("totalProd1");
+    console.log("totaalProd111 ");
     setTotalProd(totalProd)
   }
 
@@ -32,16 +33,12 @@ export default function ProductsCart(props) {
       setCantidadProd(cantidadFinal+1)
     }
     if(boton.textContent === 'prueba-') {
-      if(cantidadFinal != 0){
+        console.log("voy a resstaaar");
         setCantidadProd(cantidadFinal-1)
-      } else{
-        deleteCart(id)
-      }
-      
     }
   })
-  //useEffect(()=>{calcularTotalProd(cantidadFinal)},[])
-  //calcularTotalProd(cantidadFinal)
+
+  useEffect(()=>{calcularTotalProd(cantidadFinal)},[])
   return (
     <>
     <hr/>
